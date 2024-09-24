@@ -45,8 +45,8 @@ The following variables were removed because they are neither features nor targe
   - The number of neurons and layers were selected to balance model complexity without overfitting, based on the size of the input features. ReLU is a well-established choice for hidden layers, and Sigmoid is appropriate for binary output tasks.
   
 ### Model Performance:
-  - Accuracy: The final model achieved an accuracy of 72.52% on the test dataset.
-  - Loss: The binary cross-entropy loss was 0.5554.
+  - Accuracy: The final model achieved an accuracy of 72.39% on the test dataset.
+  - Loss: The binary cross-entropy loss was 0.5568.
     
 While this is a reasonable accuracy, it falls short of ideal predictive performance, leaving room for improvement.
 
@@ -59,7 +59,7 @@ ________________________________________
 
 ### Overall Results
 
-The deep neural network model demonstrated a reasonable performance with an accuracy of 72.52%. The model was able to identify patterns in the dataset and provide a baseline for predicting the success of charity campaigns. However, the model’s performance could be enhanced with additional tuning or by trying different algorithms.
+The deep neural network model demonstrated a reasonable performance with an accuracy of 72.39%. The model was able to identify patterns in the dataset and provide a baseline for predicting the success of charity campaigns. However, the model’s performance could be enhanced with additional tuning or by trying different algorithms.
 
 ### Recommendation for a Different Model
 Given the moderate performance of the neural network, I recommend considering a Random Forest Classifier for this classification problem. Random Forests are ensemble models that can often outperform neural networks on tabular data. They require less preprocessing and can provide insights into feature importance, allowing us to determine which features most impact the success of a charity campaign.
