@@ -40,8 +40,36 @@ The following variables were removed because they are neither features nor targe
 - ### Activation Functions:
   -	ReLU (Rectified Linear Unit) was chosen for both hidden layers because it is a popular activation function for neural networks that helps mitigate the vanishing gradient problem.
   -	Sigmoid was used for the output layer to output probabilities, making it suitable for binary classification.
+
+### Model Optimization Attempts
+In order to improve the model’s performance and prevent overfitting, I made three different optimization attempts:
+
+### 1. First Optimization: Adding Dropout Layers
+- Changes Made:
+  - I added dropout layers after each hidden layer to randomly set 20% of the neurons inactive during each training step, helping to prevent overfitting.
+  - The first hidden layer was set to have 80 neurons with a ReLU activation function.
+  - The second hidden layer had 30 neurons, also using ReLU, followed by a dropout layer.
+  - The output layer had 1 neuron with a sigmoid activation for binary classification.
+
+![image](https://github.com/user-attachments/assets/59c64283-9c84-45e8-9807-e3e919d6cbe1)
+    
+  Outcome: This resulted in a total of 5,981 parameters. While the model performed better with regularization, further optimization attempts were made to see if accuracy could be improved further.
+
+
+### 2. Second Optimization: Adjusting the Number of Neurons in Hidden Layers
+- Changes Made:
+  - I reduced the number of neurons in the first hidden layer from 80 to 50 to see if a smaller network with fewer parameters would generalize better.
+    
+  Outcome: Reducing the number of neurons decreased the overall model size and training time, but the performance on both the training and test sets slightly decreased, indicating that the model was not learning enough with fewer neurons.
+
+### 3. Third Optimization: Adding Another Hidden Layer
+- Changes Made:
+  - I added a third hidden layer with 20 neurons using ReLU activation. The idea was to introduce more depth to the model and potentially capture more complex patterns.
+    
+Outcome: Adding the third hidden layer led to a slight improvement in accuracy, but the model also took longer to train. The results indicated that the deeper network was learning more complex relationships, though performance gains were marginal with the added complexity.
+
   
-- ### Why these choices?:
+### Why these choices?:
   - The number of neurons and layers were selected to balance model complexity without overfitting, based on the size of the input features. ReLU is a well-established choice for hidden layers, and Sigmoid is appropriate for binary output tasks.
   
 ### Model Performance:
